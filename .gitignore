@@ -1,2 +1,5 @@
 main.c
 .*swp
+main
+print_list.c
+print_array.c
