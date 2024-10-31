@@ -29,3 +29,19 @@ void _swapints(int *array, size_t i, size_t j)
 	array[i] = array[j];
 	array[j] = temp;
 }
+
+void swap_nodes(listint_t **list, listint_t *left, listint_t *right)
+{
+	if (left->prev)
+		left->prev->next = right;
+	else
+		*list = right;
+
+	if (right->next)
+		right->next->prev = left;
+
+	right->prev = left->prev;
+	left->next = right->next;
+	right->next = left;
+	left->prev = right;
+}
