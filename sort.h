@@ -1,7 +1,7 @@
 #ifndef SORT_H
 #define SORT_H
 
-
+#include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
@@ -32,5 +32,7 @@ void print_array(const int *array, size_t size);
 void quicksort(int *array, int low, int high, size_t size);
 int lomuto_partition(int *array, int low, int high, size_t size);
 void swap_nodes(listint_t **list, listint_t *left, listint_t *right);
+void counting_sort(int *array, size_t size);
+int _get_max_int_array(int *array, size_t size);
 
 #endif /* SORT_H */
